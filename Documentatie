@@ -1,0 +1,40 @@
+HerbaVital - Site web despre medicină naturistă
+
+HerbaVital este un site web informativ dedicat plantelor medicinale, remediilor naturiste și produselor inspirate din natură.
+
+Site-ul este construit ca o platformă de prezentare pentru un brand fictiv de bunăstare, având o interfață clară, modernă și responsive.
+
+Pagini realizate:
+
+- 'index.html' - pagina principală a site-ului
+- 'remedii-naturiste.html' - pagină cu remedii, căutare și tabel de componente
+- 'contact.html' - pagină de contact cu formular validat
+
+Funcționalități implementate:
+
+- bară de navigare fixă;
+- evidențierea paginii active;
+- carusel de imagini;
+- funcție de căutare;
+- tabel de componente naturiste;
+- formular de contact;
+- validare pentru nume, email, telefon, subiect și mesaj;
+- trimitere prin `mailto`;
+- video de prezentare;
+- conectare cu rețele sociale;
+- buton de ajutor;
+- butoane UP și DOWN;
+- design responsive pentru desktop, tabletă și mobil.
+
+Tehnologii folosite:
+
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5
+- Bootstrap Icons
+- GitHub Pages
+
+## Observație
+
+Informațiile prezentate pe site au scop educativ și nu înlocuiesc sfatul unui medic sau farmacist.
