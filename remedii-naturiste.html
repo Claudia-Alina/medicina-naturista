@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Configurează afișarea corectă a conținutului pe toate tipurile de ecran -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Definește titlul paginii de remedii -->
+    <title>HerbaVital | Remedii naturiste</title>
+
+    <!-- Încarcă Bootstrap pentru structură, spațiere și componente interactive -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Încarcă iconițele folosite în secțiuni și în cardurile informative -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Încarcă stilurile personalizate ale paginii și ale întregului site -->
+    <link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+
+    <!-- Meniul principal oferă acces rapid la toate paginile și rămâne vizibil în partea superioară -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top meniu-principal">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-flower1"></i> HerbaVital
+            </a>
+
+            <!-- Butonul este util pe ecrane mici, unde meniul se afișează sub formă de colapsare -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#meniuNavigare" aria-controls="meniuNavigare" aria-expanded="false" aria-label="Deschide meniul">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="meniuNavigare">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Acasă</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="remedii-naturiste.html">Remedii naturiste</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center ms-lg-3">
+                        <button class="btn btn-ajutor" type="button" data-bs-toggle="modal" data-bs-target="#modalAjutor">
+                            Ajutor
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Antetul introduce tema paginii și pregătește utilizatorul pentru conținutul de mai jos -->
+        <section class="antet-pagina">
+            <div class="container text-center">
+                <h1>Remedii naturiste</h1>
+                <p>
+                    Alege plante și produse naturale în funcție de nevoile tale:
+                    relaxare, digestie, imunitate sau îngrijire externă.
+                </p>
+            </div>
+        </section>
+
+        <!-- Prima zonă prezintă produse și plante cunoscute, într-un format ușor de parcurs -->
+        <section class="sectiune-alba sectiune-lista-remedii">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8">
+                        <h2 class="titlu-sectiune text-center">Remedii populare</h2>
+                        <p class="text-muted text-center">
+                            O selecție variată de plante, produse apicole și opțiuni naturale folosite frecvent în rutina de zi cu zi.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cardurile combină imagine, categorie și descriere scurtă pentru orientare rapidă -->
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 element-cautabil">
+                        <div class="card card-personalizat h-100">
+                            <img src="imagini/remedii/musetel.jpg" class="card-img-top" alt="Mușețel">
+                            <div class="card-body">
+                                <span class="categorie-remediu">Relaxare • Digestie</span>
+                                <h5 class="card-title mt-2">Mușețel</h5>
+                                <p class="card-text">
+                                    Mușețelul este una dintre cele mai cunoscute plante medicinale, apreciată pentru aroma sa blândă și pentru utilizarea tradițională în momentele de relaxare. Este întâlnit frecvent sub formă de ceai sau infuzie și este asociat cu confortul digestiv și starea de calm.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 element-cautabil">
+                        <div class="card card-personalizat h-100">
+                            <img src="imagini/remedii/aloe-vera.jpg" class="card-img-top" alt="Aloe vera">
+                            <div class="card-body">
+                                <span class="categorie-remediu">Îngrijire externă • Piele</span>
+                                <h5 class="card-title mt-2">Aloe vera</h5>
+                                <p class="card-text">
+                                    Aloe vera este folosită des în produse de îngrijire externă datorită texturii sale răcoritoare și hidratante. Gelul de aloe este potrivit pentru rutinele de îngrijire a pielii, mai ales în produse calmante și emoliente.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 element-cautabil">
+                        <div class="card card-personalizat h-100">
+                            <img src="imagini/remedii/lavanda.jpg" class="card-img-top" alt="Lavandă">
+                            <div class="card-body">
+                                <span class="categorie-remediu">Somn • Relaxare</span>
+                                <h5 class="card-title mt-2">Lavandă</h5>
+                                <p class="card-text">
+                                    Lavanda este apreciată pentru parfumul său delicat și pentru atmosfera de liniște pe care o creează. Este folosită în ceaiuri, uleiuri esențiale și produse aromatice, fiind asociată cu relaxarea și odihna.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 element-cautabil">
+                        <div class="card card-personalizat h-100">
+                            <img src="imagini/remedii/menta.jpg" class="card-img-top" alt="Mentă">
+                            <div class="card-body">
+                                <span class="categorie-remediu">Digestie • Prospețime</span>
+                                <h5 class="card-title mt-2">Mentă</h5>
+                                <p class="card-text">
+                                    Menta are o aromă proaspătă și revigorantă, fiind una dintre cele mai populare plante folosite în ceaiuri și infuzii. Este asociată tradițional cu prospețimea, confortul digestiv și senzația de revigorare.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 element-cautabil">
+                        <div class="card card-personalizat h-100">
+                            <img src="imagini/remedii/turmeric.jpg" class="card-img-top" alt="Turmeric">
+                            <div class="card-body">
+                                <span class="categorie-remediu">Energie • Vitalitate</span>
+                                <h5 class="card-title mt-2">Turmeric</h5>
+                                <p class="card-text">
+                                    Turmericul este o rădăcină intens colorată, folosită atât în bucătărie, cât și în produse naturiste. Este apreciat pentru gustul său cald, ușor condimentat, și pentru rolul său în rutinele orientate spre echilibru și vitalitate.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 element-cautabil">
+                        <div class="card card-personalizat h-100">
+                            <img src="imagini/remedii/ghimbir.jpg" class="card-img-top" alt="Ghimbir">
+                            <div class="card-body">
+                                <span class="categorie-remediu">Digestie • Energie</span>
+                                <h5 class="card-title mt-2">Ghimbir</h5>
+                                <p class="card-text">
+                                    Ghimbirul este cunoscut pentru aroma sa intensă, ușor picantă, și pentru utilizarea sa în ceaiuri, preparate culinare și suplimente naturiste. Este asociat frecvent cu digestia, energia și confortul în sezonul rece.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 element-cautabil">
+                        <div class="card card-personalizat h-100">
+                            <img src="imagini/remedii/echinacea.jpg" class="card-img-top" alt="Echinacea">
+                            <div class="card-body">
+                                <span class="categorie-remediu">Imunitate • Sezon rece</span>
+                                <h5 class="card-title mt-2">Echinacea</h5>
+                                <p class="card-text">
+                                    Echinacea este o plantă utilizată tradițional în perioadele reci ale anului. Se regăsește adesea în ceaiuri, tincturi sau capsule și este asociată cu susținerea organismului în rutina de sezon.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 element-cautabil">
+                        <div class="card card-personalizat h-100">
+                            <img src="imagini/remedii/miere-borcan.jpg" class="card-img-top" alt="Miere naturală într-un borcan">
+                            <div class="card-body">
+                                <span class="categorie-remediu">Gât • Energie</span>
+                                <h5 class="card-title mt-2">Miere</h5>
+                                <p class="card-text">
+                                    Mierea naturală este apreciată pentru gustul său dulce și pentru versatilitatea în ceaiuri, deserturi sau obiceiuri zilnice de îngrijire. Este un ingredient simplu și autentic, folosit de mult timp în combinație cu plante și infuzii.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 element-cautabil">
+                        <div class="card card-personalizat h-100">
+                            <img src="imagini/remedii/polen-borcan.jpg" class="card-img-top" alt="Polen într-un borcan">
+                            <div class="card-body">
+                                <span class="categorie-remediu">Tonus • Vitalitate</span>
+                                <h5 class="card-title mt-2">Polen</h5>
+                                <p class="card-text">
+                                    Polenul este un produs apicol bogat în nutrienți, folosit adesea în alimentația echilibrată. Are un gust specific și poate fi adăugat în iaurt, smoothie-uri sau alte preparate simple, în funcție de preferințe.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secțiunea oferă câteva repere simple pentru alegerea unui remediu potrivit -->
+        <section class="sectiune-crem sectiune-ghid-remedii">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="eticheta-sectiune">Ghid rapid</span>
+                    <h2 class="titlu-sectiune mt-3">Cum alegi mai ușor un remediu</h2>
+                    <p class="text-muted">
+                        Găsești mai jos câțiva pași simpli care te ajută să alegi mai ușor între plante, produse apicole și alte opțiuni naturale.
+                    </p>
+                </div>
+
+                <!-- Cele trei carduri explică pe scurt cum poate fi parcursă pagina fără elemente vizuale repetitive -->
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card-orientare">
+                            <i class="bi bi-1-circle"></i>
+                            <h5>Pornește de la nevoie</h5>
+                            <p>Gândește-te mai întâi ce cauți: relaxare, digestie ușoară, susținere în sezonul rece sau îngrijire externă.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card-orientare">
+                            <i class="bi bi-2-circle"></i>
+                            <h5>Verifică forma de utilizare</h5>
+                            <p>Unele remedii se potrivesc mai bine ca ceai, altele ca gel, extract, miere sau amestec pentru băuturi calde.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card-orientare">
+                            <i class="bi bi-3-circle"></i>
+                            <h5>Citește profilul complet</h5>
+                            <p>Compară pe scurt profilul fiecărui produs și vezi în ce momente din zi este ales cel mai des.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catalogul interactiv grupează produsele pe categorii și oferă mai multe detalii la selecție -->
+        <section class="sectiune-alba sectiune-ghid-plante">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="titlu-sectiune mt-3">Catalog interactiv de remedii naturale</h2>
+                </div>
+
+                <!-- Filtrele permit selectarea rapidă a unei categorii principale -->
+                <div class="filtre-plante text-center mb-3">
+                    <button class="btn filtru-planta activ" onclick="filtreazaPlante('toate', this)">Toate</button>
+                    <button class="btn filtru-planta" onclick="filtreazaPlante('relaxare', this)">Relaxare</button>
+                    <button class="btn filtru-planta" onclick="filtreazaPlante('digestie', this)">Digestie</button>
+                    <button class="btn filtru-planta" onclick="filtreazaPlante('imunitate', this)">Imunitate</button>
+                    <button class="btn filtru-planta" onclick="filtreazaPlante('piele', this)">Piele</button>
+                    <button class="btn filtru-planta" onclick="filtreazaPlante('energie', this)">Energie</button>
+                    <button class="btn filtru-planta" onclick="filtreazaPlante('gat', this)">Gât</button>
+                </div>
+
+                <p id="rezultatFiltruPlante" class="text-center text-muted mb-4">
+                    Afișăm toate plantele disponibile.
+                </p>
+
+                <!-- Fiecare card detaliat conține informații esențiale și poate fi selectat pentru a completa panoul de rezumat -->
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-4 element-filtrabil" data-categorie="relaxare digestie">
+                        <article class="card-planta-detaliata h-100"
+                                 data-nume="Mușețel"
+                                 data-latin="Matricaria chamomilla"
+                                 data-utilizare="Ceai, infuzie, extract"
+                                 data-moment="Seara, după mese sau în momente de relaxare"
+                                 data-beneficii="Relaxare, confort digestiv, stare de calm"
+                                 data-detalii="Mușețelul este una dintre cele mai cunoscute plante medicinale, apreciată pentru aroma sa blândă și pentru utilizarea tradițională în momentele de relaxare. Este întâlnit frecvent sub formă de ceai sau infuzie și este asociat cu confortul digestiv și starea de calm."
+                                 onclick="selecteazaPlantaDetaliata(this)">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5>Mușețel</h5>
+                                    <p class="denumire-latina">Matricaria chamomilla</p>
+                                </div>
+                                <span class="insigna-profil">Blând</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="pastila-planta verde">Relaxare</span>
+                                <span class="pastila-planta galben">Digestie</span>
+                            </div>
+
+                            <ul class="lista-profil-planta">
+                                <li><strong>Formă:</strong> ceai, infuzie, extract</li>
+                                <li><strong>Moment potrivit:</strong> seara sau după mese</li>
+                                <li><strong>Profil:</strong> calm, blând, ușor de integrat</li>
+                            </ul>
+
+                            <button type="button" class="btn btn-outline-success btn-sm buton-profil">
+                                Vezi profilul complet
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 element-filtrabil" data-categorie="piele">
+                        <article class="card-planta-detaliata h-100"
+                                 data-nume="Aloe vera"
+                                 data-latin="Aloe barbadensis"
+                                 data-utilizare="Gel, cremă, loțiune"
+                                 data-moment="În rutina de îngrijire externă"
+                                 data-beneficii="Hidratare, îngrijire externă, senzație răcoritoare"
+                                 data-detalii="Aloe vera este folosită des în produse de îngrijire externă datorită texturii sale răcoritoare și hidratante. Gelul de aloe este potrivit pentru rutinele de îngrijire a pielii, mai ales în produse calmante și emoliente."
+                                 onclick="selecteazaPlantaDetaliata(this)">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5>Aloe vera</h5>
+                                    <p class="denumire-latina">Aloe barbadensis</p>
+                                </div>
+                                <span class="insigna-profil">Îngrijire</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="pastila-planta roz">Piele</span>
+                            </div>
+
+                            <ul class="lista-profil-planta">
+                                <li><strong>Formă:</strong> gel, cremă, loțiune</li>
+                                <li><strong>Moment potrivit:</strong> după curățare sau hidratare</li>
+                                <li><strong>Profil:</strong> delicat, hidratant, calmant</li>
+                            </ul>
+
+                            <button type="button" class="btn btn-outline-success btn-sm buton-profil">
+                                Vezi profilul complet
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 element-filtrabil" data-categorie="relaxare somn">
+                        <article class="card-planta-detaliata h-100"
+                                 data-nume="Lavandă"
+                                 data-latin="Lavandula angustifolia"
+                                 data-utilizare="Ulei esențial, ceai, produse aromatice"
+                                 data-moment="Seara sau în rutina de relaxare"
+                                 data-beneficii="Relaxare, odihnă, atmosferă liniștitoare"
+                                 data-detalii="Lavanda este apreciată pentru parfumul său delicat și pentru atmosfera de liniște pe care o creează. Este folosită în ceaiuri, uleiuri esențiale și produse aromatice, fiind asociată cu relaxarea și odihna."
+                                 onclick="selecteazaPlantaDetaliata(this)">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5>Lavandă</h5>
+                                    <p class="denumire-latina">Lavandula angustifolia</p>
+                                </div>
+                                <span class="insigna-profil">Calmant</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="pastila-planta mov">Somn</span>
+                                <span class="pastila-planta verde">Relaxare</span>
+                            </div>
+
+                            <ul class="lista-profil-planta">
+                                <li><strong>Formă:</strong> ceai, ulei esențial, produse aromatice</li>
+                                <li><strong>Moment potrivit:</strong> seara</li>
+                                <li><strong>Profil:</strong> floral, liniștitor, delicat</li>
+                            </ul>
+
+                            <button type="button" class="btn btn-outline-success btn-sm buton-profil">
+                                Vezi profilul complet
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 element-filtrabil" data-categorie="digestie">
+                        <article class="card-planta-detaliata h-100"
+                                 data-nume="Mentă"
+                                 data-latin="Mentha piperita"
+                                 data-utilizare="Ceai, infuzie, ulei esențial"
+                                 data-moment="După mese sau în momente de prospețime"
+                                 data-beneficii="Prospețime, confort digestiv, revigorare"
+                                 data-detalii="Menta are o aromă proaspătă și revigorantă, fiind una dintre cele mai populare plante folosite în ceaiuri și infuzii. Este asociată tradițional cu prospețimea, confortul digestiv și senzația de revigorare."
+                                 onclick="selecteazaPlantaDetaliata(this)">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5>Mentă</h5>
+                                    <p class="denumire-latina">Mentha piperita</p>
+                                </div>
+                                <span class="insigna-profil">Fresh</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="pastila-planta galben">Digestie</span>
+                            </div>
+
+                            <ul class="lista-profil-planta">
+                                <li><strong>Formă:</strong> ceai, infuzie, ulei</li>
+                                <li><strong>Moment potrivit:</strong> după mese</li>
+                                <li><strong>Profil:</strong> răcoritor, clar, revigorant</li>
+                            </ul>
+
+                            <button type="button" class="btn btn-outline-success btn-sm buton-profil">
+                                Vezi profilul complet
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 element-filtrabil" data-categorie="energie imunitate">
+                        <article class="card-planta-detaliata h-100"
+                                 data-nume="Turmeric"
+                                 data-latin="Curcuma longa"
+                                 data-utilizare="Pulbere, băuturi calde, mixuri naturiste"
+                                 data-moment="Dimineața sau în rutine orientate spre vitalitate"
+                                 data-beneficii="Echilibru, vitalitate, gust cald și condimentat"
+                                 data-detalii="Turmericul este o rădăcină intens colorată, folosită atât în bucătărie, cât și în produse naturiste. Este apreciat pentru gustul său cald, ușor condimentat, și pentru rolul său în rutinele orientate spre echilibru și vitalitate."
+                                 onclick="selecteazaPlantaDetaliata(this)">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5>Turmeric</h5>
+                                    <p class="denumire-latina">Curcuma longa</p>
+                                </div>
+                                <span class="insigna-profil">Condimentat</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="pastila-planta portocaliu">Energie</span>
+                                <span class="pastila-planta verde">Imunitate</span>
+                            </div>
+
+                            <ul class="lista-profil-planta">
+                                <li><strong>Formă:</strong> pulbere, băuturi, combinații naturiste</li>
+                                <li><strong>Moment potrivit:</strong> dimineața</li>
+                                <li><strong>Profil:</strong> cald, intens, energizant</li>
+                            </ul>
+
+                            <button type="button" class="btn btn-outline-success btn-sm buton-profil">
+                                Vezi profilul complet
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 element-filtrabil" data-categorie="digestie energie">
+                        <article class="card-planta-detaliata h-100"
+                                 data-nume="Ghimbir"
+                                 data-latin="Zingiber officinale"
+                                 data-utilizare="Ceai, preparate culinare, suplimente naturiste"
+                                 data-moment="Dimineața sau după mese"
+                                 data-beneficii="Digestie, energie, confort în sezonul rece"
+                                 data-detalii="Ghimbirul este cunoscut pentru aroma sa intensă, ușor picantă, și pentru utilizarea sa în ceaiuri, preparate culinare și suplimente naturiste. Este asociat frecvent cu digestia, energia și confortul în sezonul rece."
+                                 onclick="selecteazaPlantaDetaliata(this)">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5>Ghimbir</h5>
+                                    <p class="denumire-latina">Zingiber officinale</p>
+                                </div>
+                                <span class="insigna-profil">Intens</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="pastila-planta galben">Digestie</span>
+                                <span class="pastila-planta portocaliu">Energie</span>
+                            </div>
+
+                            <ul class="lista-profil-planta">
+                                <li><strong>Formă:</strong> ceai, preparate culinare, suplimente</li>
+                                <li><strong>Moment potrivit:</strong> dimineața sau după mese</li>
+                                <li><strong>Profil:</strong> aromat, picant, revigorant</li>
+                            </ul>
+
+                            <button type="button" class="btn btn-outline-success btn-sm buton-profil">
+                                Vezi profilul complet
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 element-filtrabil" data-categorie="imunitate">
+                        <article class="card-planta-detaliata h-100"
+                                 data-nume="Echinacea"
+                                 data-latin="Echinacea purpurea"
+                                 data-utilizare="Ceai, tinctură, capsule"
+                                 data-moment="Mai ales în sezonul rece"
+                                 data-beneficii="Susținerea organismului, rutină de sezon, perioade reci"
+                                 data-detalii="Echinacea este o plantă utilizată tradițional în perioadele reci ale anului. Se regăsește adesea în ceaiuri, tincturi sau capsule și este asociată cu susținerea organismului în rutina de sezon."
+                                 onclick="selecteazaPlantaDetaliata(this)">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5>Echinacea</h5>
+                                    <p class="denumire-latina">Echinacea purpurea</p>
+                                </div>
+                                <span class="insigna-profil">Sezonier</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="pastila-planta verde">Imunitate</span>
+                            </div>
+
+                            <ul class="lista-profil-planta">
+                                <li><strong>Formă:</strong> ceai, tinctură, capsule</li>
+                                <li><strong>Moment potrivit:</strong> în sezonul rece</li>
+                                <li><strong>Profil:</strong> practic, cunoscut, echilibrat</li>
+                            </ul>
+
+                            <button type="button" class="btn btn-outline-success btn-sm buton-profil">
+                                Vezi profilul complet
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 element-filtrabil" data-categorie="gat energie">
+                        <article class="card-planta-detaliata h-100"
+                                 data-nume="Miere"
+                                 data-latin="Produs apicol natural"
+                                 data-utilizare="Ca atare, în ceai, în deserturi sau în combinații naturale"
+                                 data-moment="Dimineața, în sezonul rece sau în pauze liniștite"
+                                 data-beneficii="Gust dulce, versatilitate, rutină reconfortantă"
+                                 data-detalii="Mierea naturală este apreciată pentru gustul său dulce și pentru versatilitatea în ceaiuri, deserturi sau obiceiuri zilnice de îngrijire. Este un ingredient simplu și autentic, folosit de mult timp în combinație cu plante și infuzii."
+                                 onclick="selecteazaPlantaDetaliata(this)">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5>Miere</h5>
+                                    <p class="denumire-latina">Produs apicol natural</p>
+                                </div>
+                                <span class="insigna-profil">Reconfortant</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="pastila-planta galben">Gât</span>
+                                <span class="pastila-planta portocaliu">Energie</span>
+                            </div>
+
+                            <ul class="lista-profil-planta">
+                                <li><strong>Formă:</strong> simplă, în ceai sau în deserturi</li>
+                                <li><strong>Moment potrivit:</strong> dimineața sau în sezonul rece</li>
+                                <li><strong>Profil:</strong> dulce, blând, familiar</li>
+                            </ul>
+
+                            <button type="button" class="btn btn-outline-success btn-sm buton-profil">
+                                Vezi profilul complet
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 element-filtrabil" data-categorie="energie imunitate">
+                        <article class="card-planta-detaliata h-100"
+                                 data-nume="Polen"
+                                 data-latin="Produs apicol natural"
+                                 data-utilizare="Granule, în iaurt, în smoothie-uri sau alte preparate simple"
+                                 data-moment="Dimineața sau în perioade mai solicitante"
+                                 data-beneficii="Aport nutritiv, tonus, alimentație echilibrată"
+                                 data-detalii="Polenul este un produs apicol bogat în nutrienți, folosit adesea în alimentația echilibrată. Are un gust specific și poate fi adăugat în iaurt, smoothie-uri sau alte preparate simple, în funcție de preferințe."
+                                 onclick="selecteazaPlantaDetaliata(this)">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5>Polen</h5>
+                                    <p class="denumire-latina">Produs apicol natural</p>
+                                </div>
+                                <span class="insigna-profil">Tonic</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="pastila-planta portocaliu">Energie</span>
+                                <span class="pastila-planta verde">Imunitate</span>
+                            </div>
+
+                            <ul class="lista-profil-planta">
+                                <li><strong>Formă:</strong> granule, iaurt, smoothie-uri</li>
+                                <li><strong>Moment potrivit:</strong> dimineața</li>
+                                <li><strong>Profil:</strong> natural, hrănitor, practic</li>
+                            </ul>
+
+                            <button type="button" class="btn btn-outline-success btn-sm buton-profil">
+                                Vezi profilul complet
+                            </button>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Panoul de mai jos se actualizează automat când utilizatorul selectează un remediu din catalog -->
+                <div id="panouDetaliiPlanta" class="panou-detalii-planta mt-4">
+                    <h5>Selectează un remediu</h5>
+                    <p class="mb-0">
+                        Apasă pe unul dintre carduri pentru a vedea un rezumat extins al produsului selectat.
+                    </p>
+                </div>
+
+                <div class="alert alert-success mt-4">
+                    Informațiile au scop educativ și nu înlocuiesc recomandarea unui medic sau farmacist.
+                </div>
+            </div>
+        </section>
+
+        <!-- Secțiunea FAQ adaugă un plus de utilitate și răspunde pe scurt la întrebări firești ale utilizatorului -->
+        <section class="sectiune-crem sectiune-intrebari">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="titlu-sectiune mt-3">Întrebări frecvente</h2>
+                </div>
+
+                <!-- Accordion-ul grupează răspunsurile astfel încât pagina să rămână aerisită și ușor de parcurs -->
+                <div class="accordion accordion-herbavital" id="accordionIntrebari">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#intrebareUnu" aria-expanded="true" aria-controls="intrebareUnu">
+                                1. Produsele naturiste înlocuiesc tratamentele medicale?
+                            </button>
+                        </h2>
+                        <div id="intrebareUnu" class="accordion-collapse collapse show" data-bs-parent="#accordionIntrebari">
+                            <div class="accordion-body">
+                                Nu. Informațiile și produsele prezentate au rol de susținere a stării de bine și nu înlocuiesc recomandarea unui medic sau farmacist.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#intrebareDoi" aria-expanded="false" aria-controls="intrebareDoi">
+                                2. Cum aleg un remediu potrivit pentru mine?
+                            </button>
+                        </h2>
+                        <div id="intrebareDoi" class="accordion-collapse collapse" data-bs-parent="#accordionIntrebari">
+                            <div class="accordion-body">
+                                Poți porni de la nevoia principală: relaxare, digestie, imunitate, energie sau îngrijire externă. Fiecare plantă este prezentată cu utilizări generale și forme de administrare.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#intrebareTrei" aria-expanded="false" aria-controls="intrebareTrei">
+                                3. Pot folosi plantele medicinale zilnic?
+                            </button>
+                        </h2>
+                        <div id="intrebareTrei" class="accordion-collapse collapse" data-bs-parent="#accordionIntrebari">
+                            <div class="accordion-body">
+                                Unele plante pot fi consumate ocazional sau în cure scurte, însă utilizarea zilnică depinde de plantă, doză și starea fiecărei persoane.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#intrebarePatru" aria-expanded="false" aria-controls="intrebarePatru">
+                                4. Ceaiurile naturiste au contraindicații?
+                            </button>
+                        </h2>
+                        <div id="intrebarePatru" class="accordion-collapse collapse" data-bs-parent="#accordionIntrebari">
+                            <div class="accordion-body">
+                                Da, unele plante pot interacționa cu tratamente, alergii sau anumite afecțiuni. Este recomandată prudență, mai ales în sarcină, alăptare sau tratamente medicamentoase.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#intrebareCinci" aria-expanded="false" aria-controls="intrebareCinci">
+                                5. Care este diferența dintre ceai, tinctură și extract?
+                            </button>
+                        </h2>
+                        <div id="intrebareCinci" class="accordion-collapse collapse" data-bs-parent="#accordionIntrebari">
+                            <div class="accordion-body">
+                                Ceaiul este o infuzie ușoară, tinctura este o soluție concentrată, iar extractul poate avea o concentrație mai mare de substanțe active.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#intrebareSase" aria-expanded="false" aria-controls="intrebareSase">
+                                6. Uleiurile esențiale se pot aplica direct pe piele?
+                            </button>
+                        </h2>
+                        <div id="intrebareSase" class="accordion-collapse collapse" data-bs-parent="#accordionIntrebari">
+                            <div class="accordion-body">
+                                În general, nu se recomandă aplicarea directă fără diluare. Uleiurile esențiale sunt concentrate și pot irita pielea.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#intrebareSapte" aria-expanded="false" aria-controls="intrebareSapte">
+                                7. Produsele apicole sunt potrivite pentru oricine?
+                            </button>
+                        </h2>
+                        <div id="intrebareSapte" class="accordion-collapse collapse" data-bs-parent="#accordionIntrebari">
+                            <div class="accordion-body">
+                                Mierea, polenul și propolisul pot fi utile în rutina zilnică, dar nu sunt recomandate persoanelor alergice la produse apicole.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#intrebareOpt" aria-expanded="false" aria-controls="intrebareOpt">
+                                8. Cum pot afla mai multe despre un produs sau o plantă?
+                            </button>
+                        </h2>
+                        <div id="intrebareOpt" class="accordion-collapse collapse" data-bs-parent="#accordionIntrebari">
+                            <div class="accordion-body">
+                                Poți folosi pagina de remedii, funcția de căutare sau formularul de contact pentru întrebări generale.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer-ul închide pagina și păstrează identitatea vizuală a proiectului -->
+    <footer class="footer-site">
+        <div class="container">
+            <h5><i class="bi bi-flower1"></i> HerbaVital</h5>
+            <p class="mb-0">
+                Remedii naturale, plante medicinale și informații organizate pentru utilizatori.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Butoanele fixe sunt utile pentru deplasarea rapidă într-o pagină mai lungă -->
+    <button class="buton-sus" onclick="mergiSus()" aria-label="Mergi sus">↑</button>
+    <button class="buton-jos" onclick="mergiJos()" aria-label="Mergi jos">↓</button>
+
+    <!-- Fereastra de ajutor explică pe scurt cum se folosește site-ul -->
+    <div class="modal fade" id="modalAjutor" tabindex="-1" aria-labelledby="titluModalAjutor" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-ajutor">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="titluModalAjutor">Ajutor navigare</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Închide"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Folosește meniul principal pentru a naviga între pagini. În pagina de remedii poți căuta rapid
+                        plante sau categorii, iar în pagina de contact poți trimite un mesaj prin formular.
+                    </p>
+                    <p class="mb-0">
+                        Pentru deplasare rapidă în pagină, poți folosi butoanele UP și DOWN din partea dreaptă.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Încarcă funcționalitățile Bootstrap pentru meniu, colapsări și componentele interactive -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Încarcă funcțiile personalizate pentru căutare, filtrare și interacțiuni în pagină -->
+    <script src="js/script.js"></script>
+</body>
+</html>

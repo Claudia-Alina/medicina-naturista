@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Configurează afișarea corectă pe telefoane, tablete și desktop -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Definește titlul paginii de contact -->
+    <title>HerbaVital | Contact</title>
+
+    <!-- Încarcă Bootstrap pentru layout, formular și comportament responsive -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Încarcă iconițele folosite pentru datele de contact și rețelele sociale -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Încarcă fișierul comun de stiluri personalizate -->
+    <link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+
+    <!-- Meniul principal permite navigarea între pagini și rămâne mereu la îndemână -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top meniu-principal">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-flower1"></i> HerbaVital
+            </a>
+
+            <!-- Butonul este necesar pe dispozitivele cu ecran mai mic -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#meniuNavigare" aria-controls="meniuNavigare" aria-expanded="false" aria-label="Deschide meniul">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="meniuNavigare">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Acasă</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="remedii-naturiste.html">Remedii naturiste</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center ms-lg-3">
+                        <button class="btn btn-ajutor" type="button" data-bs-toggle="modal" data-bs-target="#modalAjutor">
+                            Ajutor
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Antetul introduce pagina și explică pe scurt scopul formularului de contact -->
+        <section class="antet-pagina">
+            <div class="container text-center">
+                <h1>Contact</h1>
+                <p>
+                    Ai o întrebare despre plante, produse naturale sau informațiile prezentate?
+                    Trimite-ne un mesaj.
+                </p>
+            </div>
+        </section>
+
+        <!-- Secțiunea principală grupează formularul și zona laterală de informații într-un layout echilibrat -->
+        <section class="sectiune-alba">
+            <div class="container">
+                <div class="row g-5 align-items-start">
+
+                    <!-- Coloana din stânga conține formularul principal, validat înainte de trimitere -->
+                    <div class="col-lg-7">
+                        <div class="card card-contact">
+                            <div class="card-body p-4 p-lg-5">
+                                <h2 class="titlu-sectiune mb-3">Trimite un mesaj</h2>
+                                <p class="text-muted">
+                                    Completează formularul de mai jos. Câmpurile sunt validate înainte de trimitere.
+                                </p>
+
+                                <!-- Formularul folosește validarea din JavaScript pentru un feedback mai clar -->
+                                <form action="mailto:contact@herbavital.ro" method="post" enctype="text/plain" onsubmit="return valideazaFormularContact()">
+                                    <div class="mb-3">
+                                        <label for="nume" class="form-label">Nume complet</label>
+                                        <input type="text" class="form-control" id="nume" name="nume" placeholder="Exemplu: Popescu Maria" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Adresă de email</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="exemplu@email.com" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="telefon" class="form-label">Număr de telefon</label>
+                                        <input type="tel" class="form-control" id="telefon" name="telefon" placeholder="+40 700 000 000" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="subiect" class="form-label">Subiect</label>
+                                        <select class="form-select" id="subiect" name="subiect" required>
+                                            <option value="">Alege un subiect</option>
+                                            <option value="Informatii remedii">Informații despre remedii</option>
+                                            <option value="Produse naturale">Produse naturale</option>
+                                            <option value="Colaborare">Colaborare</option>
+                                            <option value="Alt subiect">Alt subiect</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="mesaj" class="form-label">Mesaj</label>
+                                        <textarea class="form-control" id="mesaj" name="mesaj" rows="5" placeholder="Scrie mesajul tău aici..." required></textarea>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-success">
+                                        Trimite mesajul
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coloana din dreapta completează formularul cu imagine, date de contact și social media -->
+                    <div class="col-lg-5">
+                        <img src="imagini/contact/contact-natura.jpg" class="img-fluid imagine-rotunjita mb-4" alt="Contact HerbaVital">
+
+                        <div class="card card-personalizat mb-4">
+                            <div class="card-body">
+                                <h4 class="titlu-sectiune">Date de contact</h4>
+                                <p class="mb-2">
+                                    <i class="bi bi-geo-alt-fill text-success"></i>
+                                    Str. Naturii nr. 12, Timișoara
+                                </p>
+                                <p class="mb-2">
+                                    <i class="bi bi-envelope-fill text-success"></i>
+                                    contact@herbavital.ro
+                                </p>
+                                <p class="mb-2">
+                                    <i class="bi bi-telephone-fill text-success"></i>
+                                    +40 700 000 000
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card card-personalizat">
+                            <div class="card-body">
+                                <h4 class="titlu-sectiune">Program și social media</h4>
+                                <p class="mb-1">Luni - Vineri: 09:00 - 18:00</p>
+                                <p class="mb-1">Sâmbătă: 10:00 - 14:00</p>
+                                <p class="mb-0">Duminică: Închis</p>
+
+                                <hr>
+
+                                <h5>Urmărește-ne</h5>
+                                <a href="https://www.facebook.com/" class="link-social-contact" target="_blank" aria-label="Facebook" rel="noreferrer">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                                <a href="https://www.instagram.com/" class="link-social-contact" target="_blank" aria-label="Instagram" rel="noreferrer">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                                <a href="https://www.youtube.com/" class="link-social-contact" target="_blank" aria-label="YouTube" rel="noreferrer">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer-ul închide pagina și păstrează identitatea vizuală a site-ului -->
+    <footer class="footer-site">
+        <div class="container">
+            <h5><i class="bi bi-flower1"></i> HerbaVital</h5>
+            <p class="mb-0">
+                Contactează-ne pentru informații generale despre plante și produse naturale.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Butoanele fixe oferă utilizatorului o navigare rapidă într-o pagină mai lungă -->
+    <button class="buton-sus" onclick="mergiSus()" aria-label="Mergi sus">↑</button>
+    <button class="buton-jos" onclick="mergiJos()" aria-label="Mergi jos">↓</button>
+
+    <!-- Fereastra de ajutor păstrează instrucțiunile scurte la îndemână -->
+    <div class="modal fade" id="modalAjutor" tabindex="-1" aria-labelledby="titluModalAjutor" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-ajutor">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="titluModalAjutor">Ajutor navigare</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Închide"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Folosește meniul principal pentru a naviga între pagini. În pagina de remedii poți căuta rapid
+                        plante sau categorii, iar în pagina de contact poți trimite un mesaj prin formular.
+                    </p>
+                    <p class="mb-0">
+                        Pentru deplasare rapidă în pagină, poți folosi butoanele UP și DOWN din partea dreaptă.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Încarcă funcționalitățile Bootstrap pentru meniu și fereastra modală -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Încarcă funcțiile personalizate pentru validare și deplasare în pagină -->
+    <script src="js/script.js"></script>
+</body>
+</html>

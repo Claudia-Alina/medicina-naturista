@@ -1,0 +1,694 @@
+/* Configurează aspectul general al paginii și păstrează spațiu pentru meniul fix de sus */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f3ea;
+    color: #3d332b;
+    padding-top: 72px;
+}
+
+/* Stilizează meniul principal și îi oferă o prezență vizuală clară */
+.meniu-principal {
+    background-color: #2f5d3a;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* Evidențiază numele brandului din meniu */
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+/* Controlează distanța și greutatea linkurilor din meniul principal */
+.navbar .nav-link {
+    margin-left: 12px;
+    font-weight: 500;
+}
+
+/* Marchează pagina activă astfel încât utilizatorul să știe unde se află */
+.navbar .nav-link.active {
+    font-weight: 800;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Stilizează butonul Ajutor pentru a se integra în bara de navigare */
+.btn-ajutor {
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 6px 18px;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+/* Păstrează contrastul bun al butonului la hover */
+.btn-ajutor:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* Definește forma generală a ferestrei modale de ajutor */
+.modal-ajutor {
+    border: none;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+/* Colorează antetul modalei în ton cu identitatea site-ului */
+.modal-ajutor .modal-header {
+    background-color: #2f5d3a;
+    color: #ffffff;
+}
+
+/* Face iconița de închidere vizibilă pe fundal închis */
+.modal-ajutor .btn-close {
+    filter: invert(1);
+}
+
+/* Creează zona hero cu imagine de fundal și overlay pentru lizibilitate */
+.sectiune-ero {
+    min-height: 620px;
+    background: linear-gradient(rgba(47, 93, 58, 0.70), rgba(47, 93, 58, 0.70)), url("../imagini/acasa/hero-natura.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+/* Evidențiază eticheta scurtă din deschiderea paginii */
+.eticheta-hero {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+}
+
+/* Controlează dimensiunea și impactul titlului principal */
+.sectiune-ero h1 {
+    font-size: 3.5rem;
+    font-weight: 850;
+    line-height: 1.1;
+}
+
+/* Stilizează antetul paginilor secundare */
+.antet-pagina {
+    background: linear-gradient(rgba(47, 93, 58, 0.82), rgba(47, 93, 58, 0.82)), url("../imagini/acasa/produse-naturale.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 95px 20px;
+}
+
+/* Evidențiază titlul mare din anteturile secundare */
+.antet-pagina h1 {
+    font-size: 3rem;
+    font-weight: 850;
+}
+
+/* Definește secțiunile cu fundal alb */
+.sectiune-alba {
+    background-color: #ffffff;
+    padding: 75px 0;
+}
+
+/* Definește secțiunile cu fundal crem pentru alternanță vizuală */
+.sectiune-crem {
+    background-color: #f7f3ea;
+    padding: 75px 0;
+}
+
+/* Adaugă spațiu dedicat sub carusel, fără să depindă de paddingul secțiunii următoare */
+.sectiune-carusel {
+    padding-bottom: 120px;
+}
+
+/* Păstrează încă puțin aer și direct în jurul caruselului */
+.sectiune-carusel .carusel-personalizat {
+    margin-bottom: 20px;
+}
+
+/* Ajustează secțiunea despre astfel încât să nu se mai lipească de carusel */
+.sectiune-despre {
+    padding-top: 45px;
+    padding-bottom: 130px;
+}
+
+/* Controlează respirația vizuală a secțiunii cu nevoi */
+.sectiune-nevoi {
+    padding-top: 115px;
+    padding-bottom: 130px;
+}
+
+/* Dă mai multă distanță între titlu și cardurile cu nevoi */
+.sectiune-nevoi .row.g-4 {
+    margin-top: 25px;
+}
+
+/* Uniformizează titlurile importante din pagini */
+.titlu-sectiune {
+    color: #2f5d3a;
+    font-weight: 850;
+}
+
+/* Rotunjește imaginile și le oferă profunzime prin umbră */
+.imagine-rotunjita {
+    border-radius: 24px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+/* Stilizează caruselul ca un bloc vizual puternic și bine delimitat */
+.carusel-personalizat {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+}
+
+/* Păstrează imaginile din carusel la o înălțime constantă */
+.carusel-personalizat img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Crește lizibilitatea textului afișat peste imaginile caruselului */
+.carousel-caption {
+    background-color: rgba(47, 93, 58, 0.72);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+/* Definește cardurile standard folosite în mai multe zone ale site-ului */
+.card-personalizat {
+    border: none;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Adaugă un efect discret de ridicare la hover */
+.card-personalizat:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Uniformizează înălțimea imaginilor din carduri */
+.card-personalizat img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Stilizează iconițele mari din cardurile informative */
+.iconita-card {
+    font-size: 42px;
+    color: #2f5d3a;
+    margin-bottom: 16px;
+}
+
+/* Creează pastilele de categorie folosite deasupra remediilor */
+.categorie-remediu {
+    display: inline-block;
+    background-color: #e5f1e8;
+    color: #2f5d3a;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Stilizează câmpul principal de căutare */
+.camp-cautare {
+    border-radius: 999px;
+    padding: 14px 22px;
+}
+
+/* Stilizează etichetele scurte de secțiune */
+.eticheta-sectiune {
+    display: inline-block;
+    background-color: #e5f1e8;
+    color: #2f5d3a;
+    padding: 7px 16px;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+/* Controlează spațierea secțiunii-ghid de plante */
+.sectiune-ghid-plante {
+    padding-top: 95px;
+    padding-bottom: 115px;
+}
+
+/* Creează spațiu pentru noua secțiune de ghid care a înlocuit video-ul */
+.sectiune-ghid-remedii {
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+
+/* Configurează zona de întrebări frecvente */
+.sectiune-intrebari {
+    padding-top: 95px;
+    padding-bottom: 110px;
+}
+
+/* Definește cardurile de orientare cu pași sau recomandări scurte */
+.card-orientare {
+    background-color: #ffffff;
+    border-radius: 22px;
+    padding: 28px;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Aplică un mic efect de accentuare la hover */
+.card-orientare:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Dimensionează iconițele din cardurile de orientare */
+.card-orientare i {
+    font-size: 40px;
+    color: #2f5d3a;
+    margin-bottom: 16px;
+}
+
+/* Evidențiază titlurile din cardurile de orientare */
+.card-orientare h5 {
+    color: #2f5d3a;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+/* Menține textul descriptiv într-un ton secundar */
+.card-orientare p {
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+/* Stilizează noul card detaliat de plantă care înlocuiește tabelul clasic */
+.card-planta-detaliata {
+    background: linear-gradient(180deg, #ffffff, #f6fbf7);
+    border: 1px solid rgba(47, 93, 58, 0.08);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+/* Marchează vizual cardul selectat și oferă feedback la interacțiune */
+.card-planta-detaliata:hover,
+.card-planta-detaliata.activa {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.12);
+    border-color: rgba(47, 93, 58, 0.35);
+}
+
+/* Evidențiază numele plantei din card */
+.card-planta-detaliata h5 {
+    color: #2f5d3a;
+    font-weight: 850;
+    margin-bottom: 4px;
+}
+
+/* Stilizează denumirea latină într-un ton mai discret */
+.denumire-latina {
+    margin-bottom: 0;
+    color: #7a8179;
+    font-size: 0.92rem;
+}
+
+/* Creează o insignă scurtă pentru profilul plantei */
+.insigna-profil {
+    background-color: #eef7f0;
+    color: #2f5d3a;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+/* Organizează informațiile esențiale din card într-o listă ușor de parcurs */
+.lista-profil-planta {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 18px;
+}
+
+/* Delimitează vizual fiecare informație din profil */
+.lista-profil-planta li {
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(47, 93, 58, 0.08);
+    color: #566056;
+}
+
+/* Elimină separatorul inutil după ultimul element */
+.lista-profil-planta li:last-child {
+    border-bottom: none;
+}
+
+/* Butonul are rol vizual și întărește ideea de interactivitate a cardului */
+.buton-profil {
+    border-radius: 999px;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+/* Așază filtrele pe un singur rând flexibil și aerisit */
+.filtre-plante {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Stilizează butoanele de filtrare */
+.filtru-planta {
+    border-radius: 999px;
+    border: 1px solid #2f5d3a;
+    color: #2f5d3a;
+    background-color: #ffffff;
+    padding: 8px 18px;
+    font-weight: 700;
+}
+
+/* Marchează filtrul activ sau starea de hover */
+.filtru-planta.activ,
+.filtru-planta:hover {
+    background-color: #2f5d3a;
+    color: #ffffff;
+}
+
+/* Definește pastilele informative pentru tipurile de nevoie asociate unei plante */
+.pastila-planta {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    margin: 3px;
+}
+
+/* Culoare pentru etichetele verzi */
+.pastila-planta.verde {
+    background-color: #e5f1e8;
+    color: #2f5d3a;
+}
+
+/* Culoare pentru etichetele galbene */
+.pastila-planta.galben {
+    background-color: #fff4d8;
+    color: #8a6200;
+}
+
+/* Culoare pentru etichetele portocalii */
+.pastila-planta.portocaliu {
+    background-color: #ffe8d6;
+    color: #a54f00;
+}
+
+/* Culoare pentru etichetele mov */
+.pastila-planta.mov {
+    background-color: #eee7ff;
+    color: #5c3f99;
+}
+
+/* Culoare pentru etichetele roz */
+.pastila-planta.roz {
+    background-color: #ffe5ec;
+    color: #9f2f55;
+}
+
+/* Creează panoul de detalii care se actualizează la selectarea unei plante */
+.panou-detalii-planta {
+    background: linear-gradient(135deg, #ffffff, #eef7f0);
+    border-left: 5px solid #2f5d3a;
+    border-radius: 22px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+/* Evidențiază titlul plantei selectate */
+.panou-detalii-planta h5 {
+    color: #2f5d3a;
+    font-weight: 850;
+    margin-bottom: 10px;
+}
+
+/* Menține textul panoului într-un ton cald și ușor de citit */
+.panou-detalii-planta p {
+    color: #5f665f;
+}
+
+/* Stilizează întrebările frecvente într-un format modern și compact */
+.accordion-herbavital .accordion-item {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Evidențiază butoanele de deschidere din FAQ */
+.accordion-herbavital .accordion-button {
+    font-weight: 700;
+    color: #2f5d3a;
+    background-color: #ffffff;
+    padding: 20px 22px;
+}
+
+/* Marchează starea deschisă a întrebării active */
+.accordion-herbavital .accordion-button:not(.collapsed) {
+    background-color: #eef7f0;
+    color: #24492e;
+    box-shadow: none;
+}
+
+/* Adaugă un focus vizibil pentru accesibilitate */
+.accordion-herbavital .accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(143, 185, 150, 0.20);
+}
+
+/* Stilizează zona de răspuns din FAQ */
+.accordion-herbavital .accordion-body {
+    background-color: #ffffff;
+    color: #5f665f;
+}
+
+/* Uniformizează câmpurile formularului */
+.form-control,
+.form-select {
+    border-radius: 14px;
+    padding: 12px;
+}
+
+/* Evidențiază câmpul activ pentru o experiență mai clară */
+.form-control:focus,
+.form-select:focus {
+    border-color: #8fb996;
+    box-shadow: 0 0 0 0.2rem rgba(143, 185, 150, 0.25);
+}
+
+/* Stilizează cardul formularului de contact */
+.card-contact {
+    border: none;
+    border-radius: 24px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Personalizează butoanele principale verzi */
+.btn-success {
+    background-color: #2f5d3a;
+    border-color: #2f5d3a;
+    border-radius: 999px;
+    padding: 10px 26px;
+    font-weight: 700;
+}
+
+/* Creează o stare de hover mai închisă pentru butoanele verzi */
+.btn-success:hover {
+    background-color: #24492e;
+    border-color: #24492e;
+}
+
+/* Rotunjește butonul secundar din hero */
+.btn-outline-light {
+    border-radius: 999px;
+    padding: 10px 26px;
+    font-weight: 700;
+}
+
+/* Definește butoanele fixe de navigare în pagină */
+.buton-sus,
+.buton-jos {
+    position: fixed;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background-color: #2f5d3a;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    z-index: 999;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.20);
+}
+
+/* Poziționează butonul pentru revenirea în sus */
+.buton-sus {
+    bottom: 48px;
+}
+
+/* Poziționează butonul pentru coborâre în pagină */
+.buton-jos {
+    bottom: 112px;
+}
+
+/* Inversează poziția celor două butoane doar pe pagina principală */
+.pagina-acasa .buton-sus {
+    bottom: 112px;
+}
+
+.pagina-acasa .buton-jos {
+    bottom: 48px;
+}
+
+/* Configurează footer-ul comun al paginilor */
+.footer-site {
+    background-color: #2f5d3a;
+    color: #ffffff;
+    padding: 45px 0;
+}
+
+/* Stilizează iconițele sociale din pagina de contact */
+.link-social-contact {
+    color: #2f5d3a;
+    font-size: 26px;
+    margin-right: 14px;
+    text-decoration: none;
+}
+
+/* Oferă feedback vizual la hover pentru iconițele sociale */
+.link-social-contact:hover {
+    color: #24492e;
+}
+
+/* Adaugă mai mult spațiu sub cardurile din lista de remedii */
+.sectiune-lista-remedii {
+    padding-bottom: 130px;
+}
+
+/* Ajustează layoutul pentru tablete și ecrane medii */
+@media (max-width: 992px) {
+    .sectiune-ero {
+        min-height: 560px;
+        text-align: center;
+    }
+
+    .sectiune-ero h1 {
+        font-size: 2.7rem;
+    }
+
+    .carusel-personalizat img {
+        height: 380px;
+    }
+
+    .btn-ajutor {
+        margin-top: 12px;
+    }
+}
+
+/* Ajustează layoutul pentru telefoane și ecrane înguste */
+@media (max-width: 768px) {
+    body {
+        padding-top: 68px;
+    }
+
+    .sectiune-ero {
+        min-height: 520px;
+        padding: 40px 0;
+    }
+
+    .sectiune-ero h1 {
+        font-size: 2.2rem;
+    }
+
+    .antet-pagina {
+        padding: 70px 20px;
+    }
+
+    .antet-pagina h1 {
+        font-size: 2.3rem;
+    }
+
+    .sectiune-alba,
+    .sectiune-crem {
+        padding: 55px 0;
+    }
+
+    .sectiune-carusel {
+        padding-bottom: 85px;
+    }
+
+    .sectiune-despre {
+        padding-top: 30px;
+        padding-bottom: 90px;
+    }
+
+    .sectiune-nevoi {
+        padding-top: 80px;
+        padding-bottom: 95px;
+    }
+
+    .sectiune-ghid-remedii,
+    .sectiune-ghid-plante,
+    .sectiune-intrebari {
+        padding-top: 70px;
+        padding-bottom: 85px;
+    }
+
+    .carusel-personalizat img {
+        height: 300px;
+    }
+
+    .card-personalizat img {
+        height: 190px;
+    }
+
+    .card-planta-detaliata {
+        padding: 20px;
+    }
+
+    .buton-sus,
+    .buton-jos {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+        right: 14px;
+    }
+
+    .buton-sus {
+        bottom: 46px;
+    }
+
+    .buton-jos {
+        bottom: 102px;
+    }
+
+    .pagina-acasa .buton-sus {
+        bottom: 102px;
+    }
+
+    .pagina-acasa .buton-jos {
+        bottom: 46px;
+    }
+}
