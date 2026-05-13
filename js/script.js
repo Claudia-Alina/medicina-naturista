@@ -180,3 +180,125 @@ document.addEventListener("DOMContentLoaded", () => {
         selecteazaPlantaDetaliata(primaPlanta);
     }
 });
+
+/* Selector interactiv pentru valorile HerbaVital */
+document.addEventListener("DOMContentLoaded", () => {
+
+    const carduri =
+        document.querySelectorAll(".card-valoare");
+
+    const panou =
+        document.getElementById("panouValori");
+
+    const titlu =
+        document.getElementById("titluValoare");
+
+    const text =
+        document.getElementById("textValoare");
+
+    if (!carduri.length || !panou) {
+        return;
+    }
+
+    carduri.forEach((card, index) => {
+
+        card.style.cursor = "pointer";
+        card.style.transition = "0.3s ease";
+
+        /* Primul card activ implicit */
+        if (index === 0) {
+
+            card.style.backgroundColor = "#2f5d3a";
+
+            const iconita =
+                card.querySelector(".iconita-card");
+
+            const titluCard =
+                card.querySelector("h5");
+
+            const paragrafe =
+                card.querySelectorAll("p");
+
+            if (iconita) {
+                iconita.style.color = "#ffffff";
+            }
+
+            if (titluCard) {
+                titluCard.style.color = "#ffffff";
+            }
+
+            paragrafe.forEach((p) => {
+                p.style.color = "#ffffff";
+            });
+
+        }
+
+        card.addEventListener("click", () => {
+
+            /* Reset */
+            carduri.forEach((element) => {
+
+                element.style.backgroundColor = "#ffffff";
+                element.style.transform = "translateY(0)";
+
+                const iconita =
+                    element.querySelector(".iconita-card");
+
+                const titluCard =
+                    element.querySelector("h5");
+
+                const paragrafe =
+                    element.querySelectorAll("p");
+
+                if (iconita) {
+                    iconita.style.color = "#2f5d3a";
+                }
+
+                if (titluCard) {
+                    titluCard.style.color = "#3d332b";
+                }
+
+                paragrafe.forEach((p) => {
+                    p.style.color = "#3d332b";
+                });
+
+            });
+
+            /* Activează cardul */
+            card.style.backgroundColor = "#2f5d3a";
+            card.style.transform = "translateY(-6px)";
+
+            const iconita =
+                card.querySelector(".iconita-card");
+
+            const titluCard =
+                card.querySelector("h5");
+
+            const paragrafe =
+                card.querySelectorAll("p");
+
+            if (iconita) {
+                iconita.style.color = "#ffffff";
+            }
+
+            if (titluCard) {
+                titluCard.style.color = "#ffffff";
+            }
+
+            paragrafe.forEach((p) => {
+                p.style.color = "#ffffff";
+            });
+
+            /* Actualizează panoul */
+            titlu.textContent =
+                card.dataset.titlu;
+
+            text.textContent =
+                card.dataset.text;
+
+        });
+
+    });
+
+});
+
