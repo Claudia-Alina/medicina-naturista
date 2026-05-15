@@ -48,6 +48,24 @@
         border-radius: 50%;
         padding: 15px;
     }
+    /* =========================
+    FIX TABEL MOBIL
+    ========================= */
+
+    @media (max-width: 768px) {
+
+        .calendar-responsive td:first-child {
+            font-size: 0;
+            white-space: nowrap;
+            text-align: center;
+            width: 50px;
+        }
+
+        .calendar-responsive td:first-child i {
+            font-size: 22px;
+        }
+
+    }
 </style>
 </head>
 <body>
@@ -164,7 +182,7 @@
             <h2 class="titlu-sectiune mb-4 text-center">Calendarul Recoltării</h2>
             <p class="text-center mb-5 text-muted">Urmează ritmul naturii și descoperă când este momentul optim pentru a culege darurile pământului.</p>
             
-            <div class="table-responsive shadow-sm rounded">
+        <div class="table-responsive calendar-responsive shadow-sm rounded">
                 <table class="table table-hover align-middle bg-white">
                     <thead class="table-success">
                         <tr>
