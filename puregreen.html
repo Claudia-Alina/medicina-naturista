@@ -247,10 +247,10 @@
     <script>
         const dateProduse = {
             detox: {
-                nume: "Compoziție: PureGreen Detox",
+                nume: "Compoziție PureGreen™ Detox",
                 ingrediente: [
                     ["Extract de Urzică", "250 mg", "-"],
-                    ["Extract de Talpa Cucului", "50 mg", "-"],
+                    ["Talpa Cucului", "50 mg", "-"],
                     ["Fibre Vegetale", "100 mg", "5%"],
                     ["Mangan", "2 mg", "95%"],
                     ["Vitamina K", "120 μg", "85%"],
@@ -260,9 +260,9 @@
                 ]
             },
             relax: {
-                nume: "Compoziție: PureGreen Relax",
+                nume: "Compoziție PureGreen™ Relax",
                 ingrediente: [
-                    ["Extract Lavandă", "150 mg", "-"],
+                    ["Extract de Lavandă", "150 mg", "-"],
                     ["Extract de Tei", "150 mg", "-"],
                     ["Extract de Rozmarin", "40 mg", "-"],
                     ["L-teanină", "100 mg", "-"],
@@ -286,7 +286,11 @@
                 <tr>
                     <td><strong>${item[0]}</strong></td>
                     <td>${item[1]}</td>
-                    <td><span class="badge badge-dzr">${item[2]}</span></td>
+                    <td>
+                        <span class="badge ${item[2] === '-' ? 'bg-secondary' : 'badge-dzr'}">
+                            ${item[2]}
+                        </span>
+                    </td>
                 </tr>
             `).join('');
         }
