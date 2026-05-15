@@ -18,37 +18,55 @@
     <!-- Încarcă stilurile personalizate ale proiectului -->
     <link rel="stylesheet" href="css/stil.css">
 
-    <style>
-        /* Stiluri specifice doar pentru această pagină pentru a asigura aspectul pozelor */
-        .container-carusel-fix {
-            max-width: 450px;
-            margin: 0 auto;
+<style>
+    /* Fix simplu: Eliminăm înălțimile fixe pentru a evita golurile sub poze */
+    .container-carusel-fix {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .carusel-personalizat .carousel-item {
+        /* Am eliminat height: 500px; acum înălțimea este dinamică */
+        background-color: #f7f3ea; 
+    }
+
+    .img-fit {
+        width: 100%;
+        height: auto; /* Imaginea își păstrează proporțiile naturale */
+        display: block;
+    }
+
+    .badge-dzr {
+        background-color: #2f5d3a;
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+    /* Stil pentru săgeți să fie vizibile peste poze */
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        background-color: rgba(47, 93, 58, 0.4);
+        border-radius: 50%;
+        padding: 15px;
+    }
+    /* =========================
+    FIX TABEL MOBIL
+    ========================= */
+
+    @media (max-width: 768px) {
+
+        .calendar-responsive td:first-child {
+            font-size: 0;
+            white-space: nowrap;
+            text-align: center;
+            width: 50px;
         }
 
-        /* Controlul înălțimii pentru a evita spațiile albe pe mobil */
-        .carusel-personalizat .carousel-item {
-            height: 500px;
-            background-color: #f7f3ea; /* Coerent cu stil.css */
+        .calendar-responsive td:first-child i {
+            font-size: 22px;
         }
 
-        .img-fit {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        @media (max-width: 768px) {
-            .carusel-personalizat .carousel-item {
-                height: 320px; /* Ajustare automată pentru ecrane mici */
-            }
-        }
-
-        .badge-dzr {
-            background-color: #2f5d3a;
-            color: #ffffff;
-            font-weight: 700;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
 
@@ -164,7 +182,7 @@
             <h2 class="titlu-sectiune mb-4 text-center">Calendarul Recoltării</h2>
             <p class="text-center mb-5 text-muted">Urmează ritmul naturii și descoperă când este momentul optim pentru a culege darurile pământului.</p>
             
-            <div class="table-responsive shadow-sm rounded">
+        <div class="table-responsive calendar-responsive shadow-sm rounded">
                 <table class="table table-hover align-middle bg-white">
                     <thead class="table-success">
                         <tr>
@@ -177,22 +195,22 @@
                         <tr>
                             <td class="fw-bold text-success"><i class="bi bi-flower1"></i> Primăvara</td>
                             <td>Martie - Mai</td>
-                            <td>Urzică, Păpădie, Podbal, Muguri de brad, Flori de soc.</td>
+                            <td>Urzică, Păpădie, Podbal, Muguri de brad, Flori de soc</td>
                         </tr>
                         <tr>
                             <td class="fw-bold text-success"><i class="bi bi-sun"></i> Vara</td>
                             <td>Iunie - August</td>
-                            <td>Sunătoare, Gălbenele, Mentă, Tei, Lavandă, Coada-șoricelului.</td>
+                            <td>Sunătoare, Gălbenele, Mentă, Tei, Lavandă, Coada-șoricelului</td>
                         </tr>
                         <tr>
                             <td class="fw-bold text-success"><i class="bi bi-wind"></i> Toamna</td>
                             <td>Septembrie - Noiembrie</td>
-                            <td>Măceșe, Cătină, Rădăcină de Brusture, Tătăneasă, Ienupăr.</td>
+                            <td>Măceșe, Cătină, Rădăcină de Brusture, Tătăneasă, Ienupăr</td>
                         </tr>
                         <tr>
                             <td class="fw-bold text-success"><i class="bi bi-snow"></i> Iarna</td>
                             <td>Decembrie - Februarie</td>
-                            <td>Vâsc (pe ramurile copacilor), Scoarță de salcie sau de stejar.</td>
+                            <td>Vâsc, Scoarță de salcie sau de stejar</td>
                         </tr>
                     </tbody>
                 </table>
@@ -229,10 +247,10 @@
     <script>
         const dateProduse = {
             detox: {
-                nume: "Compoziție: PureGreen Detox",
+                nume: "Compoziție PureGreen™ Detox",
                 ingrediente: [
                     ["Extract de Urzică", "250 mg", "-"],
-                    ["Extract de Talpa Cucului", "50 mg", "-"],
+                    ["Talpa Cucului", "50 mg", "-"],
                     ["Fibre Vegetale", "100 mg", "5%"],
                     ["Mangan", "2 mg", "95%"],
                     ["Vitamina K", "120 μg", "85%"],
@@ -242,9 +260,9 @@
                 ]
             },
             relax: {
-                nume: "Compoziție: PureGreen Relax",
+                nume: "Compoziție PureGreen™ Relax",
                 ingrediente: [
-                    ["Extract Lavandă", "150 mg", "-"],
+                    ["Extract de Lavandă", "150 mg", "-"],
                     ["Extract de Tei", "150 mg", "-"],
                     ["Extract de Rozmarin", "40 mg", "-"],
                     ["L-teanină", "100 mg", "-"],
@@ -268,7 +286,11 @@
                 <tr>
                     <td><strong>${item[0]}</strong></td>
                     <td>${item[1]}</td>
-                    <td><span class="badge badge-dzr">${item[2]}</span></td>
+                    <td>
+                        <span class="badge ${item[2] === '-' ? 'bg-secondary' : 'badge-dzr'}">
+                            ${item[2]}
+                        </span>
+                    </td>
                 </tr>
             `).join('');
         }
