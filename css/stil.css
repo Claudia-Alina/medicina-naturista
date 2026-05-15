@@ -18,6 +18,19 @@ body {
     letter-spacing: 0.5px;
 }
 
+/* Permite animarea discretă a iconiței din logo fără să afecteze textul brandului */
+.navbar-brand i {
+    display: inline-block;
+    transform-origin: center;
+}
+
+/* Animează doar pe pagina principală iconița de lângă HerbaVital la hover, focus sau atingere */
+.navbar-brand:hover i,
+.navbar-brand:focus-visible i,
+.navbar-brand:active i {
+    animation: rotire-logo 0.8s ease;
+}
+
 /* Controlează distanța și greutatea linkurilor din meniul principal */
 .navbar .nav-link {
     margin-left: 12px;
@@ -110,6 +123,13 @@ body {
     font-weight: 850;
 }
 
+/* Personalizează antetul dedicat paginii despre miere locală și produse apicole */
+.antet-miere {
+    background: linear-gradient(rgba(47, 93, 58, 0.78), rgba(47, 93, 58, 0.78)), url("../imagini/miere/apicultor.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
 /* Definește secțiunile cu fundal alb */
 .sectiune-alba {
     background-color: #ffffff;
@@ -147,6 +167,55 @@ body {
 /* Dă mai multă distanță între titlu și cardurile cu nevoi */
 .sectiune-nevoi .row.g-4 {
     margin-top: 25px;
+}
+
+/* Controlează lățimea textului introductiv din secțiunea cu nevoi */
+.subtitlu-nevoi {
+    max-width: 900px;
+}
+
+/* Adaptează cardurile de nevoie pentru descrieri mai ample și mai naturale */
+.card-nevoie {
+    background: linear-gradient(180deg, #ffffff, #f8fcf8);
+}
+
+/* Oferă mai mult spațiu în cardurile cu descrieri ample */
+.card-nevoie .card-body {
+    padding: 32px;
+}
+
+/* Controlează titlurile din cardurile cu nevoi */
+.card-nevoie h5 {
+    color: #2f5d3a;
+    font-weight: 850;
+    margin-bottom: 14px;
+}
+
+/* Menține textul cardurilor ușor de parcurs și mai aerisit */
+.card-nevoie p {
+    color: #59645c;
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+/* Stilizează mesajul final care ghidează utilizatorul către pașii următori */
+.mesaj-nevoi {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #59645c;
+}
+
+/* Evidențiază linkurile din mesajul final fără să rupă identitatea vizuală */
+.mesaj-nevoi a {
+    color: #2f5d3a;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.mesaj-nevoi a:hover {
+    color: #24492e;
+    text-decoration: underline;
 }
 
 /* Uniformizează titlurile importante din pagini */
@@ -250,6 +319,21 @@ body {
     padding-bottom: 100px;
 }
 
+/* Controlează spațierea secțiunii dedicate uleiurilor și extractelor */
+.sectiune-uleiuri-media {
+    padding-top: 95px;
+    padding-bottom: 105px;
+}
+
+/* Controlează secțiunile dedicate paginii de miere locală */
+.sectiune-apicole,
+.sectiune-furnizori,
+.sectiune-miere-locala,
+.sectiune-galerie {
+    padding-top: 95px;
+    padding-bottom: 110px;
+}
+
 /* Configurează zona de întrebări frecvente */
 .sectiune-intrebari {
     padding-top: 95px;
@@ -291,6 +375,202 @@ body {
 .card-orientare p {
     color: #6c757d;
     margin-bottom: 0;
+}
+
+/* Stilizează cardurile despre produse apicole */
+.card-apicol {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Oferă feedback vizual la hover pentru cardurile apicole */
+.card-apicol:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+}
+
+/* Uniformizează imaginile cardurilor apicole */
+.card-apicol img {
+    height: 240px;
+    object-fit: cover;
+}
+
+/* Evidențiază titlurile produselor apicole */
+.card-apicol h5 {
+    color: #2f5d3a;
+    font-weight: 850;
+}
+
+/* Creează etichetele discrete pentru categoria fiecărui produs apicol */
+.eticheta-apicola {
+    display: inline-block;
+    background-color: #fff1d7;
+    color: #8a6200;
+    border-radius: 999px;
+    padding: 6px 13px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+/* Stilizează cardul pentru furnizorul local recomandat */
+.card-furnizor-local {
+    background: linear-gradient(135deg, #ffffff, #f9f4e8);
+    border: none;
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
+}
+
+/* Evidențiază numele furnizorului */
+.card-furnizor-local h4 {
+    color: #2f5d3a;
+    font-weight: 850;
+    margin-bottom: 14px;
+}
+
+/* Definește cardurile cu beneficii despre mierea locală */
+.beneficiu-local {
+    background-color: #ffffff;
+    border-radius: 22px;
+    padding: 28px;
+    height: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+}
+
+/* Stilizează iconițele din cardurile cu beneficii */
+.beneficiu-local i {
+    font-size: 38px;
+    color: #b07a00;
+    margin-bottom: 14px;
+}
+
+/* Evidențiază titlul din fiecare beneficiu */
+.beneficiu-local h5 {
+    color: #2f5d3a;
+    font-weight: 850;
+}
+
+/* Creează containerul pentru tabelul comparativ apicol */
+.tabel-apicol-wrapper {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 12px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
+}
+
+/* Elimină spațiul de sub tabel */
+.tabel-apicol {
+    margin-bottom: 0;
+}
+
+/* Stilizează antetul tabelului apicol */
+.tabel-apicol thead th {
+    background-color: #2f5d3a;
+    color: #ffffff;
+    border: none;
+    padding: 18px;
+}
+
+/* Configurează celulele tabelului apicol */
+.tabel-apicol tbody td {
+    padding: 18px;
+    vertical-align: middle;
+}
+
+/* Evidențiază rândurile tabelului la hover */
+.tabel-apicol tbody tr:hover {
+    background-color: #fff8ea;
+}
+
+/* Uniformizează imaginile din caruselul paginii de miere locală */
+.carusel-miere img {
+    height: 520px;
+    object-fit: cover;
+}
+
+/* Creează o galerie foto coerentă pentru imaginile despre apicultură */
+.galerie-miere img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Stilizează alerta discretă despre alergii la produse apicole */
+.alerta-apicola {
+    background-color: #fff8ea;
+    border: 1px solid #f0d9a5;
+    color: #6f5722;
+    border-radius: 20px;
+    padding: 18px 20px;
+}
+
+/* Definește starea inițială pentru elementele care apar animat la scroll */
+.element-reveal {
+    opacity: 0;
+    transition: opacity 0.75s ease, transform 0.75s ease;
+    will-change: opacity, transform;
+}
+
+/* Mișcă ușor în sus elementele care trebuie să urce discret la apariție */
+.reveal-jos {
+    transform: translateY(36px);
+}
+
+/* Păstrează elementele video într-o apariție mai simplă, bazată pe fade */
+.reveal-fade {
+    transform: none;
+}
+
+/* Activează starea finală după ce elementul a intrat în viewport */
+.element-reveal.vizibil {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stilizează video-ul din secțiunea cu uleiuri și îi oferă un aspect elegant */
+.video-uleiuri {
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+/* Pregătește imaginea cu uleiuri pentru un efect discret de ridicare */
+.imagine-ulei-hover {
+    min-height: 320px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Aplică un efect ușor de ridicare pentru imaginea statică */
+.imagine-ulei-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
+}
+
+/* Definește animația de flip pentru iconița din logo-ul paginii principale */
+@keyframes rotire-logo {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
 }
 
 /* Stilizează noul card detaliat de plantă care înlocuiește tabelul clasic */
@@ -545,20 +825,11 @@ body {
 
 /* Poziționează butonul pentru revenirea în sus */
 .buton-sus {
-    bottom: 48px;
+    bottom: 112px;
 }
 
 /* Poziționează butonul pentru coborâre în pagină */
 .buton-jos {
-    bottom: 112px;
-}
-
-/* Inversează poziția celor două butoane doar pe pagina principală */
-.pagina-acasa .buton-sus {
-    bottom: 112px;
-}
-
-.pagina-acasa .buton-jos {
     bottom: 48px;
 }
 
@@ -651,6 +922,7 @@ body {
 
     .sectiune-ghid-remedii,
     .sectiune-ghid-plante,
+    .sectiune-uleiuri-media,
     .sectiune-intrebari {
         padding-top: 70px;
         padding-bottom: 85px;
@@ -668,6 +940,24 @@ body {
         padding: 20px;
     }
 
+    .card-nevoie .card-body {
+        padding: 24px;
+    }
+
+    .video-uleiuri,
+    .imagine-ulei-hover {
+        min-height: 260px;
+    }
+
+    .card-apicol img,
+    .galerie-miere img {
+        height: 200px;
+    }
+
+    .carusel-miere img {
+        height: 320px;
+    }
+
     .buton-sus,
     .buton-jos {
         width: 42px;
@@ -677,18 +967,10 @@ body {
     }
 
     .buton-sus {
-        bottom: 46px;
+        bottom: 102px;
     }
 
     .buton-jos {
-        bottom: 102px;
-    }
-
-    .pagina-acasa .buton-sus {
-        bottom: 102px;
-    }
-
-    .pagina-acasa .buton-jos {
         bottom: 46px;
     }
 }

@@ -129,6 +129,46 @@ function filtreazaPlante(categorie, buton) {
     }
 }
 
+/* Filtrează produsele apicole și actualizează atât cardurile, cât și tabelul comparativ */
+function filtreazaProduseApicole(categorie, buton) {
+    document.querySelectorAll(".filtru-apicol").forEach((element) => {
+        element.classList.remove("activ");
+    });
+
+    if (buton) {
+        buton.classList.add("activ");
+    }
+
+    const carduri = document.querySelectorAll(".produs-apicol");
+    const randuri = document.querySelectorAll(".rand-apicol");
+    const mesaj = document.getElementById("rezultatFiltruApicol");
+    let numarVizibile = 0;
+
+    carduri.forEach((card) => {
+        const tip = card.dataset.tip || "";
+        const esteVizibil = categorie === "toate" || tip.includes(categorie);
+
+        card.classList.toggle("d-none", !esteVizibil);
+
+        if (esteVizibil) {
+            numarVizibile += 1;
+        }
+    });
+
+    randuri.forEach((rand) => {
+        const tip = rand.dataset.tip || "";
+        const esteVizibil = categorie === "toate" || tip.includes(categorie);
+
+        rand.classList.toggle("d-none", !esteVizibil);
+    });
+
+    if (mesaj) {
+        mesaj.textContent = categorie === "toate"
+            ? "Afișăm toate produsele apicole disponibile."
+            : `Categoria selectată: ${categorie}. Rezultate afișate: ${numarVizibile}.`;
+    }
+}
+
 /* Verifică elementele importante din formularul de contact înainte de trimitere */
 function valideazaFormularContact() {
     const nume = document.getElementById("nume");
@@ -300,5 +340,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+});
+
+/* Activează animațiile discrete ale elementelor care trebuie să apară la scroll */
+document.addEventListener("DOMContentLoaded", () => {
+    const elemente = document.querySelectorAll(".element-reveal");
+
+    if (!elemente.length) {
+        return;
+    }
+
+    const observer = new IntersectionObserver((intrari, observator) => {
+        intrari.forEach((intrare) => {
+            if (intrare.isIntersecting) {
+                intrare.target.classList.add("vizibil");
+                observator.unobserve(intrare.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    elemente.forEach((element) => {
+        observer.observe(element);
+    });
 });
 
