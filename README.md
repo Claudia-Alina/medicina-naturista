@@ -8,8 +8,6 @@ Nu modificati:
 
 \- css/stil.css
 
-\- js/script.js
-
 \- navbar-ul
 
 \- footer-ul
