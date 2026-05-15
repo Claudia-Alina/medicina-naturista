@@ -19,20 +19,20 @@
     <link rel="stylesheet" href="css/stil.css">
 
 <style>
-    /* Fix simplu: Eliminăm înălțimile fixe pentru a evita golurile sub poze */
+    /* Păstrează caruselul într-o lățime controlată, astfel încât produsul să rămână bine încadrat și ușor de urmărit */
     .container-carusel-fix {
         max-width: 450px;
         margin: 0 auto;
     }
 
     .carusel-personalizat .carousel-item {
-        /* Am eliminat height: 500px; acum înălțimea este dinamică */
+        /* Înălțimea nu este fixată, pentru ca imaginea să se așeze natural și să nu lase goluri inutile */
         background-color: #f7f3ea; 
     }
 
     .img-fit {
         width: 100%;
-        height: auto; /* Imaginea își păstrează proporțiile naturale */
+        height: auto; /* Imaginea își păstrează proporțiile naturale și se adaptează la spațiul disponibil */
         display: block;
     }
 
@@ -42,15 +42,13 @@
         font-weight: 700;
     }
 
-    /* Stil pentru săgeți să fie vizibile peste poze */
+    /* Întărește vizibilitatea săgeților caruselului atunci când acestea apar peste fundaluri mai deschise */
     .carousel-control-prev-icon, .carousel-control-next-icon {
         background-color: rgba(47, 93, 58, 0.4);
         border-radius: 50%;
         padding: 15px;
     }
-    /* =========================
-    FIX TABEL MOBIL
-    ========================= */
+    /* Ajustează tabelul pe mobil, astfel încât prima coloană să rămână lizibilă chiar și în spații mai înguste */
 
     @media (max-width: 768px) {
 
@@ -177,7 +175,7 @@
             </div>
         </section>
 
-                <!-- Secțiune Calendar Recoltare -->
+                <!-- Secțiunea calendarului de recoltare oferă un reper sezonier pentru plantele culese pe parcursul anului -->
         <section class="container my-5 py-4">
             <h2 class="titlu-sectiune mb-4 text-center">Calendarul Recoltării</h2>
             <p class="text-center mb-5 text-muted">Urmează ritmul naturii și descoperă când este momentul optim pentru a culege darurile pământului.</p>
@@ -243,7 +241,7 @@
     <!-- Încarcă funcțiile personalizate pentru deplasare și interactivitate -->
     <script src="js/script.js"></script>
 
-    <!-- Descrie functii specifice paginii puregreen.html-->
+    <!-- Scriptul de mai jos actualizează automat compoziția afișată atunci când utilizatorul schimbă produsul din carusel -->
     <script>
         const dateProduse = {
             detox: {

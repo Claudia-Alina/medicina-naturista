@@ -24,7 +24,7 @@ body {
     transform-origin: center;
 }
 
-/* Animează doar pe pagina principală iconița de lângă HerbaVital la hover, focus sau atingere */
+/* Animează discret iconița de lângă HerbaVital pe orice pagină atunci când utilizatorul trece peste logo, îl selectează sau îl atinge */
 .navbar-brand:hover i,
 .navbar-brand:focus-visible i,
 .navbar-brand:active i {
@@ -313,7 +313,7 @@ body {
     padding-bottom: 115px;
 }
 
-/* Creează spațiu pentru noua secțiune de ghid care a înlocuit video-ul */
+/* Creează spațiu pentru secțiunea de ghid, astfel încât prezentarea introductivă să aibă mai mult aer în pagină */
 .sectiune-ghid-remedii {
     padding-top: 90px;
     padding-bottom: 100px;
@@ -523,7 +523,7 @@ body {
     transform: translateY(36px);
 }
 
-/* Păstrează elementele video într-o apariție mai simplă, bazată pe fade */
+/* Păstrează elementele video într-o apariție mai simplă, bazată mai ales pe fade, fără mișcare suplimentară */
 .reveal-fade {
     transform: none;
 }
@@ -558,7 +558,7 @@ body {
     box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
 }
 
-/* Definește animația de flip pentru iconița din logo-ul paginii principale */
+/* Definește animația de flip pentru iconița din logo, fără să afecteze poziția sau lizibilitatea numelui brandului */
 @keyframes rotire-logo {
     0% {
         transform: rotateY(0deg);

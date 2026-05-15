@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-/* Selector interactiv pentru valorile HerbaVital */
+/* Gestionează interacțiunile pentru cardurile de valori, doar în paginile care folosesc acest tip de prezentare */
 document.addEventListener("DOMContentLoaded", () => {
 
     const carduri =
@@ -245,7 +245,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.style.cursor = "pointer";
         card.style.transition = "0.3s ease";
 
-        /* Primul card activ implicit */
+        /* Marchează primul card ca activ la încărcare, astfel încât utilizatorul să vadă imediat un exemplu complet */
         if (index === 0) {
 
             card.style.backgroundColor = "#2f5d3a";
@@ -275,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         card.addEventListener("click", () => {
 
-            /* Reset */
+            /* Resetează stilurile tuturor cardurilor înainte de a evidenția alegerea curentă */
             carduri.forEach((element) => {
 
                 element.style.backgroundColor = "#ffffff";
@@ -304,7 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             });
 
-            /* Activează cardul */
+            /* Aplică stilurile vizuale pentru cardul selectat, astfel încât diferența să fie clară */
             card.style.backgroundColor = "#2f5d3a";
             card.style.transform = "translateY(-6px)";
 
@@ -329,7 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 p.style.color = "#ffffff";
             });
 
-            /* Actualizează panoul */
+            /* Actualizează zona de text asociată, astfel încât conținutul să corespundă exact cardului apăsat */
             titlu.textContent =
                 card.dataset.titlu;
 
@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-/* Activează animațiile discrete ale elementelor care trebuie să apară la scroll */
+/* Activează animațiile discrete pentru elementele care trebuie să intre lin în cadru pe măsură ce utilizatorul derulează pagina */
 document.addEventListener("DOMContentLoaded", () => {
     const elemente = document.querySelectorAll(".element-reveal");
 
